@@ -43,7 +43,11 @@
 
 
 <!--Elementos do trabalho-->
-<!ELEMENT item (#PCDATA) >
+<!ELEMENT item (nometrab,urltrab) >
+
+<!--Elementos do item-->
+<!ELEMENT nometrab (#PCDATA) >
+<!ELEMENT urltrab (#PCDATA) >
 
 
 
