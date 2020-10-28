@@ -65,7 +65,12 @@
     </resumo>
     <trabalho>
         <item>
-            DTD do relatório (TP2.dtd)
+            <nometrab>
+                TP2: XML e DTD do relatório
+            </nometrab>
+            <urltrab>
+                https://github.com/anamrferreira/DAW2020-PG44412-TPC/tree/main/DAW2020-PG44412-TP2
+            </urltrab>
         </item>
     </trabalho>
 </relatorio>
