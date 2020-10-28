@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT relatorio (cabecalho,identificacao,resumo,trabalho)+ >
+
+<!--Elementos do relatório-->
+<!ELEMENT cabecalho (nomekey,titulo,subtitulo,data,docente) >
+<!ELEMENT identificacao (aluno)+ >
+<!ELEMENT resumo (paragrafo)+ >
+<!ELEMENT trabalho (item)+ >
+
+
+<!--Elementos do cabeçalho-->
+<!ELEMENT nomekey (#PCDATA) >
+<!ELEMENT titulo (#PCDATA) >
+<!ELEMENT subtitulo (#PCDATA) >
+<!ELEMENT data (dia,mes,ano) >
+<!ELEMENT docente (nomedoc,urldoc) >
+
+<!--Elementos da data-->
+<!ELEMENT dia (#PCDATA) >
+<!ELEMENT mes (#PCDATA) >
+<!ELEMENT ano (#PCDATA) >
+
+<!--Elementos do docente-->
+<!ELEMENT nomedoc (#PCDATA) >
+<!ELEMENT urldoc (#PCDATA) >
+
+
+<!--Elementos da identificação-->
+<!ELEMENT aluno (nome,numero,email) >
+
+<!--Elementos do aluno-->
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+
+<!--Atributo do aluno-->
+<!ATTLIST aluno id CDATA #REQUIRED>
+
+
+<!--Elementos do resumo-->
+<!ELEMENT paragrafo (#PCDATA) >
+
+
+<!--Elementos do trabalho-->
+<!ELEMENT item (#PCDATA) >
+
+
+
+
+
+
+
+
+
+

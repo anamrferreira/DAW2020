@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE relatorio SYSTEM "TP2.dtd">
+
+<relatorio>
+    <cabecalho>
+        <nomekey>
+            DAW2020_TP2
+        </nomekey>
+        <titulo>
+            Relatório sobre XML e DTD
+        </titulo>
+        <subtitulo>
+            Relatório do trabalho prático 2 realizado no âmbito da unidade curricular Desenvolvimento de Aplicações Web
+        </subtitulo>
+        <data>
+            <dia>
+                27
+            </dia>
+            <mes>
+                10
+            </mes>
+            <ano>
+                2020
+            </ano>
+        </data>
+        <docente>
+            <nomedoc>
+                José Carlos Ramalho
+            </nomedoc>
+            <urldoc>
+                http://www.di.uminho.pt/~jcr/
+            </urldoc>
+        </docente>        
+    </cabecalho>
+    <identificacao>
+        <aluno id="1">
+            <nome>
+                Ana Margarida da Rocha Ferreira
+            </nome>
+            <numero>
+                44412
+            </numero>
+            <email>
+                pg44412@alunos.uminho.pt
+            </email>
+        </aluno>
+    </identificacao>
+    <resumo>
+        <paragrafo>
+            XML (Extensible Markup Language) é uma linguagem de anotação, projetada para facilitar o tratamento de informação de uma forma standard e partilhável.
+            Deste modo, esta é um mecanismo para identificar estruturas num documento, tem como foco a descrição da informação. 
+        </paragrafo>
+        <paragrafo>
+            Os documentos XML são classificados como bem formados se cada instância do documento estiver de acordo com a gramática de documentos XML.
+            Um documento bem formado diz-se válido quando contém a declaração de tipo de documento apropriada e obedece às regras da mesma.
+        </paragrafo>
+        <paragrafo>
+            O propósito de a DTD (Document Type Definition) é definir a estrutura válida de cada bloco de um documento XML. 
+            A DTD pode ser declarada dentro do próprio documento XML ou como uma referência externa.
+        </paragrafo>
+        <paragrafo>
+            O trabalho proposto teve como objetivo a familiarização com XML e DTD. 
+            Este corresponde, portanto, ao presente documento XML e ao documento DTD, o qual contém a definição das estrutura e permitiu a validação do documento.
+        </paragrafo>
+    </resumo>
+    <trabalho>
+        <item>
+            DTD do relatório (TP2.dtd)
+        </item>
+    </trabalho>
+</relatorio>
