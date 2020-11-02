@@ -64,7 +64,7 @@
         <xsl:result-document href="site/{generate-id()}.html">
             <html>
                 <head>
-                    <title>Arqueossítio do NW Português</title>
+                    <title><xsl:value-of select="IDENTI"/></title>
                     <head>
                         <style>
                             div{background-color:#FF8A00;border:solid 2px #FF8A00}
