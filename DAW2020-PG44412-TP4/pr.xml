@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <key>DAW2020_TP4</key>
+        <title>TP4 - Desenvolvimento de um servidor em Node.js com integração de XSLT e XML</title>
+        <bdate>Outubro 2020</bdate>
+        <edate>Outubro 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="PG44412">
+            <name>Ana Margarida da Rocha Ferreira</name>
+            <email>pg44412@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O <b>Node.js</b> é um ambiente de <i>runtime</i> de JavaScript baseado no motor de JavaScript V8.</p>
+        <p>Relativamente à arquitetura, o Node.js caracteriza-se por utilizar um modelo direcionado a eventos, onde as operações I/O são efetuadas de forma assíncrona para a evitar bloqueios.</p>
+        <p>O trabalho realizado consistiu no desenvolvimento de um servidor em Node.js que permite aceder, através do <i>browser</i>, a uma lista de arqueossítios do NW português e às respetivas informações.</p>
+        <p>Para tal foi necessária a tranformação dos dados contidos no documento arq.xml para HTML recorrendo a XSLT.</p>
+        <p>De modo a utilizar o servidor desenvolvido deve-se correr o comando <i>node server.js</i> e abrir este <link url="http://localhost:7777/arqs">link</link> que corresponde ao índice de arqueossítios.</p>
+        <p>Para aceder à informação referente a cada arqueossítio é necessário clicar nos botões do índice ou adicionar no url o número do arqueossítio pretendido.</p>
+    </abstract>
+    <deliverables>
+        <link url="">Servidor em Node.js</link>
+    </deliverables>
+</pr>
