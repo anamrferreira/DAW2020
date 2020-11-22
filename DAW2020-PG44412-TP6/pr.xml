@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pr>
+    <meta>
+        <key>DAW2020_TP6</key>
+        <title>TP6 - Desenvolvimento de uma Single Page Application para Gestão de Tarefas</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="PG44412">
+            <name>Ana Margarida da Rocha Ferreira</name>
+            <email>pg44412@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O <b>Node.js</b> é um ambiente de <i>runtime</i> de JavaScript direcionado ao desenvolvimento de aplicações Web a nível backend e frontend.</p>
+        <p>O <b>JSON-Server</b> é uma biblioteca JavaScript que permite criar REST API de teste.</p>
+        <p>O trabalho realizado consistiu numa <i>Single Page Application</i> para Gestão de Tarefas, através do desenvolvimento de um servidor em Node.js.</p>
+        <p>A página encontra-se dividida em 3 áreas: o formulário para registo de tarefas, a lista de tarefas pendentes e a lista de tarefas cumpridas, permitindo a realização de pedidos GET, POST, PUT e DELETE.</p>
+        <p>Para realizar esses pedidos, o servidor desenvolvido comunica com o JSON-Server, que contém o ficheiro JSON correspondente à base de dados das tarefas, efetuando os métodos HTTP solicitados.</p>
+        <p>O formulário de registo de tarefas permite adicionar novas tarefas a realizar na lista de tarefas pendentes, sendo que nessa área é possível editar as tarefas e indicar se já foram resolvidas, colocando-as na lista de tarefas cumpridas.</p>
+        <p>Por fim, é ainda possível eliminar elementos da lista de tarefas cumpridas.</p>
+    </abstract>
+    <deliverables>
+        <link url="">Single Page Application para Gestão de Tarefas</link>
+    </deliverables>
+</pr>
