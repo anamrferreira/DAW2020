@@ -1,6 +1,6 @@
 var http = require('http')
 var axios = require('axios')
-var fs = require('fs')
+var moment = require('moment');
 
 var static = require('./static')
 
@@ -130,7 +130,7 @@ function generateTasksPage(tasks, d){
             <div class="w3-bar w3-metro-darken w3-xlarge">
                 <span class="w3-bar-item w3-mobile"><b>Lista de Tarefas</b></span>
                 <span class="w3-right w3-mobile">
-                    <a class="w3-bar-item w3-button w3-mobile" href="#registo">Registo</a>
+                    <a class="w3-bar-item w3-button w3-mobile" href="/">Registo</a>
                     <a class="w3-bar-item w3-button w3-mobile" href="#pendentes">Pendentes</a>
                     <a class="w3-bar-item w3-button w3-mobile" href="#cumpridas">Cumpridas</a>
                 </span>
@@ -358,7 +358,7 @@ var tasksServer = http.createServer(function (req, res) {
 
                     axios.get("http://localhost:3000/tasks/" + idTask)
                     .then( response => {
-                        resultado = response.data;
+                        resultado = response.data
                         resultado["status"] = "done"
                         console.log('PUT de tarefa:' + JSON.stringify(resultado))
                         
@@ -411,18 +411,26 @@ var tasksServer = http.createServer(function (req, res) {
                     recuperaInfo(req, resultado => {
                         console.log('POST de tarefa:' + JSON.stringify(resultado))
 
-                        axios.post('http://localhost:3000/tasks', resultado)
-                            .then(resp => {
-                                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                                res.write(generateConfirm(resp.data, request, d))
-                                res.end()
-                            })
-                            .catch(erro => {
-                                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                                res.write('<p>Erro no POST: ' + erro + '</p>')
-                                res.write('<p><a href="/">Voltar</a></p>')
-                                res.end()
-                            })
+                        if (moment(resultado.date, 'YYYY-MM-DD', true).isValid()){
+                            axios.post('http://localhost:3000/tasks', resultado)
+                                .then(resp => {
+                                    res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                                    res.write(generateConfirm(resp.data, request, d))
+                                    res.end()
+                                })
+                                .catch(erro => {
+                                    res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                                    res.write('<p>Erro no POST: ' + erro + '</p>')
+                                    res.write('<p><a href="/">Voltar</a></p>')
+                                    res.end()
+                                })  
+                        }
+                        else{
+                            res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                            res.write('<p>Recebi uma data inválida. Introduza uma data no formato yyyy-mm-dd.</p>')
+                            res.write('<p><a href="/">Voltar</a></p>')
+                            res.end()
+                        }
                     })
                 }
                 // POST tasks/:id/edit --------------------------------------------------------------------
@@ -433,18 +441,26 @@ var tasksServer = http.createServer(function (req, res) {
                     recuperaInfo(req, resultado => {
                         console.log('PUT de tarefa:' + JSON.stringify(resultado))
                         
-                        axios.put('http://localhost:3000/tasks/' + idTask, resultado)
-                            .then(resp => {
-                                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                                res.write(generateConfirm(resp.data, request, d))
-                                res.end()
-                            })
-                            .catch(erro => {
-                                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                                res.write('<p>Erro no PUT: ' + erro + '</p>')
-                                res.write('<p><a href="/">Voltar</a></p>')
-                                res.end()
-                            })
+                        if (moment(resultado.date, 'YYYY-MM-DD', true).isValid()){
+                            axios.put('http://localhost:3000/tasks/' + idTask, resultado)
+                                .then(resp => {
+                                    res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                                    res.write(generateConfirm(resp.data, request, d))
+                                    res.end()
+                                })
+                                .catch(erro => {
+                                    res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                                    res.write('<p>Erro no PUT: ' + erro + '</p>')
+                                    res.write('<p><a href="/">Voltar</a></p>')
+                                    res.end()
+                                })
+                        }
+                        else{
+                            res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                            res.write('<p>Recebi uma data inválida. Introduza uma data no formato yyyy-mm-dd.</p>')
+                            res.write('<p><a href="/">Voltar</a></p>')
+                            res.end()
+                        }
                     })
                 }
                 else{
