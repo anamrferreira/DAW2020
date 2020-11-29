@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pr>
+    <meta>
+        <key>DAW2020_TP7</key>
+        <title>TP7 - Aplicação para Gestão de Alunos recorrendo a Express e MongoDB</title>
+        <bdate>Novembro 2020</bdate>
+        <edate>Novembro 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="PG44412">
+            <name>Ana Margarida da Rocha Ferreira</name>
+            <email>pg44412@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O <i>MongoDB</i> é uma base de dados não relacional orientada a documentos.</p>
+        <p>O <i>Express</i> é um framework para aplicações web para <i>Node.js</i>.</p>
+        <p>O presente trabalho consistiu no desenvolvimento de uma aplicação para Gestão de Alunos recorrendo ao framework <i>Express</i> e à base de dados <i>MongoDB</i>, para armazenamento dos dados relativos ao alunos da unidade curricular DAW.</p>
+        <p>O <i>dataset</i> utilizado é composto por 4 atributos: nome, número, link para o github e cumprimento de cada TPC.</p>
+        <p>A página principal apresenta a lista dos alunos e botões que permitem realizar operações CRUD, que correspondem aos pedidos GET, POST, PUT e DELETE ao servidor.</p>
+        <p>Deste modo, é possível consultar as informações dos alunos, adicionar novos alunos, editar as suas informações e eliminar registos.</p>
+        <p>Para interagir com aplicação é necessário correr o servidor do <i>Mongo</i>, executar o comando <i>npm start</i> e aceder a este <link url="http://localhost:7700/">link</link>.</p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/anamrferreira/DAW2020-PG44412-TPC/tree/main/DAW2020-PG44412-TP7">Aplicação para Gestão de Alunos recorrendo a Express e MongoDB</link>
+    </deliverables>
+</pr>
