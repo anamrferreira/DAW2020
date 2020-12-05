@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pr>
+    <meta>
+        <key>DAW2020_TP8</key>
+        <title>TP8 - Aplicação para Multiple Upload e Download de Ficheiros</title>
+        <bdate>Dezembro 2020</bdate>
+        <edate>Dezembro 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="PG44412">
+            <name>Ana Margarida da Rocha Ferreira</name>
+            <email>pg44412@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>O presente trabalho consistiu no desenvolvimento de uma aplicação para realizar upload e download de ficheiros, tendo-se recorrido ao middleware do <i>Node.js</i> <i>Multer</i> para concretizar os uploads.</p>
+        <p>Para efetuar o upload de um único ficheiro utiliza-se a função upload.single(...), no entanto, como se pretendia o upload de múltiplos ficheiros, a função utilizada neste caso foi upload.array(...).</p>
+        <p>A aplicação é composta por uma página principal com a lista de ficheiros armazenados, que podem ser visualizados e descarregados ao clicar em cada linha, e uma página com um formulário para inserção dos ficheiros.</p>
+        <p>De modo a introduzir vários ficheiros simultaneamente deve-se pressionar o botão "+" para adicionar novas divisões no formulário, que são destinadas à seleção de cada ficheiro.</p>
+        <p>Cada ficheiro fica armazenado numa pasta e as suas informações, como a data de upload, nome, tamanho, mimetype e descrição, são guardadas num ficheiro .json</p>
+        <p>Para interagir com aplicação é necessário executar o comando <i>node server.js</i> e aceder a este <link url="http://localhost:7701/">link</link>.</p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/anamrferreira/DAW2020-PG44412-TPC/tree/main/DAW2020-PG44412-TP8">Aplicação para Upload e Download de Ficheiros</link>
+    </deliverables>
+</pr>
